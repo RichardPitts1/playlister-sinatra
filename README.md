@@ -12,8 +12,7 @@ In this lab, you'll be:
 
 1.  Giving our "library" of songs a dynamic web interface
 
-2.  Creating a few complex forms that allow you to create and edit Artists,
-    Songs and Genres.
+2.  Creating a few complex forms that allow you to create and edit Songs.
 
 ## Instructions
 
@@ -26,12 +25,12 @@ application. Your associations should follow this pattern:
 
 2.  A Genre can have multiple artists and multiple songs
 
-3.  A Song can belong to ONE Artist and multiple genres
+3.  A Song can belong to ONE Artist and ONE Genre
 
-4.  How would we implement the relationship of a song having many genres and
-    genre having many songs? In order to establish a "many-to-many" relationship,
-    we'll need a join table. You will need a `SongGenre` class to go along with this
-    table in the database
+4.  How would we implement the relationship of a genre having many artists and
+    artist having many genres? In order to establish a "many-to-many" relationship,
+    we'll need a join table. You can use the `Song` class to join the artist and genre
+    tables.
 
 To get the data into your database, you will want to figure out how to use your
 `LibraryParser` class in the `db/seeds.rb` file.
@@ -54,7 +53,7 @@ You should build the following routes:
 
 - This should present the user with a form to create a song, allowing them to 
   `select` a genre and an artist from a dropdown. 
-
+  
 4.  `/genres`
 
 - This should present the user with a list of all genres in the library.
@@ -74,6 +73,12 @@ You should build the following routes:
 
 - Any given genre's show page should have links to each of its artists and
   songs.
+  
+*Bonus:* `/edit-song/:id`
+
+- This should present the user with a form to update an existing song, allowing them to 
+  `select` a genre and an artist from a dropdown. 
+
   
 
 ## Fixing Migration Errors
