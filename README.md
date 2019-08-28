@@ -49,10 +49,7 @@ You should build the following routes:
 
 - Any given song's show page should have links to that song's artist and the
   each genre associated with the song.
-- Pay attention to the order of `/songs/new` and `/songs/:id`. The route
-  `/songs/new` could interpret `new` as a id if that controller action isn't
-  defined first.
-
+  
 3. `/create-song`
 
 - This should present the user with a form to create a song, allowing them to 
