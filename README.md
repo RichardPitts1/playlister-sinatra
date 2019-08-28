@@ -53,7 +53,7 @@ You should build the following routes:
   `/songs/new` could interpret `new` as a id if that controller action isn't
   defined first.
 
-3. `/create-songs`
+3. `/create-song`
 
 - This should present the user with a form to create a song, allowing them to 
   `select` a genre and an artist from a dropdown. 
