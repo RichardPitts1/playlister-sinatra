@@ -1,3 +1,3 @@
 class Genre < ActiveRecord::Base
-    # include Slugifiable::InstanceMethods
+    include Slugifiable::InstanceMethods
 end
